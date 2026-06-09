@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Linq;
 
 namespace GestaoChama
 {
@@ -15,8 +17,14 @@ namespace GestaoChama
             InitializeComponent();
 
             comboBox3.Items.Clear();
+            comboBox4.Items.Clear();
             comboBox3.Items.Add("Em Andamento");
             comboBox3.Items.Add("Resolvido");
+            comboBox4.Items.Add("Urgente");
+            comboBox4.Items.Add("Alta");
+            comboBox4.Items.Add("Média");
+            comboBox4.Items.Add("Baixa");
+            comboBox4.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,22 +90,26 @@ namespace GestaoChama
             }
 
             string descricao = textBox1.Text.Trim();
-
-            if (descricao == "")
+            if (descricao.Length < 5)
             {
-                MessageBox.Show("Mude a parte de descrição.");
+                MessageBox.Show("A descrição deve ter pelo menos 5 caracteres.");
+                return;
+            }
+
+            if (comboBox4.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione a prioridade.");
                 return;
             }
 
             Cliente cliente = (Cliente)comboBox1.SelectedItem;
             Atendente atendente = (Atendente)comboBox2.SelectedItem;
+            string prioridade = comboBox4.SelectedItem.ToString();
 
-            Chamado chamado = new Chamado(cliente, atendente, descricao);
-
+            Chamado chamado = new Chamado(cliente, atendente, descricao, prioridade);
             chamados.Add(chamado);
 
-            listBox1.DataSource = null;
-            listBox1.DataSource = chamados;
+            AtualizarListaChamados();
 
             textBox1.Clear();
         }
@@ -120,8 +132,27 @@ namespace GestaoChama
 
             chamado.Status = comboBox3.SelectedItem.ToString();
 
+            AtualizarListaChamados();
+        }
+
+        private void AtualizarListaChamados()
+        {
+            var ordem = new List<string>
+    {
+        "Urgente",
+        "Alta",
+        "Média",
+        "Baixa"
+    };
+
             listBox1.DataSource = null;
-            listBox1.DataSource = chamados;
+            listBox1.DataSource = chamados
+                .OrderBy(c => ordem.IndexOf(c.Prioridade))
+                .ToList();
+        }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

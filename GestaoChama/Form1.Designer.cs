@@ -55,6 +55,8 @@
             label6 = new Label();
             comboBox1 = new ComboBox();
             label5 = new Label();
+            label9 = new Label();
+            comboBox4 = new ComboBox();
             tabControl1.SuspendLayout();
             tabClientes.SuspendLayout();
             tabAtendentes.SuspendLayout();
@@ -90,14 +92,14 @@
             // listBox2
             // 
             listBox2.FormattingEnabled = true;
-            listBox2.Location = new Point(213, 190);
+            listBox2.Location = new Point(283, 23);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(236, 164);
+            listBox2.Size = new Size(507, 384);
             listBox2.TabIndex = 5;
             // 
             // btnCadastrarCliente
             // 
-            btnCadastrarCliente.Location = new Point(269, 141);
+            btnCadastrarCliente.Location = new Point(93, 143);
             btnCadastrarCliente.Name = "btnCadastrarCliente";
             btnCadastrarCliente.Size = new Size(94, 29);
             btnCadastrarCliente.TabIndex = 4;
@@ -107,7 +109,7 @@
             // 
             // txtContatoCliente
             // 
-            txtContatoCliente.Location = new Point(269, 86);
+            txtContatoCliente.Location = new Point(105, 79);
             txtContatoCliente.Name = "txtContatoCliente";
             txtContatoCliente.Size = new Size(125, 27);
             txtContatoCliente.TabIndex = 3;
@@ -115,7 +117,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(201, 86);
+            label2.Location = new Point(37, 86);
             label2.Name = "label2";
             label2.Size = new Size(62, 20);
             label2.TabIndex = 2;
@@ -123,15 +125,15 @@
             // 
             // txtNomeCliente
             // 
-            txtNomeCliente.Location = new Point(269, 39);
+            txtNomeCliente.Location = new Point(93, 23);
             txtNomeCliente.Name = "txtNomeCliente";
-            txtNomeCliente.Size = new Size(125, 27);
+            txtNomeCliente.Size = new Size(137, 27);
             txtNomeCliente.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(201, 46);
+            label1.Location = new Point(37, 30);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
             label1.TabIndex = 0;
@@ -155,14 +157,14 @@
             // listBoxAtendentes
             // 
             listBoxAtendentes.FormattingEnabled = true;
-            listBoxAtendentes.Location = new Point(231, 206);
+            listBoxAtendentes.Location = new Point(265, 16);
             listBoxAtendentes.Name = "listBoxAtendentes";
-            listBoxAtendentes.Size = new Size(241, 144);
+            listBoxAtendentes.Size = new Size(525, 384);
             listBoxAtendentes.TabIndex = 5;
             // 
             // btnCadastrarAtendente
             // 
-            btnCadastrarAtendente.Location = new Point(273, 148);
+            btnCadastrarAtendente.Location = new Point(91, 141);
             btnCadastrarAtendente.Name = "btnCadastrarAtendente";
             btnCadastrarAtendente.Size = new Size(94, 29);
             btnCadastrarAtendente.TabIndex = 4;
@@ -172,7 +174,7 @@
             // 
             // txtSetorAtendente
             // 
-            txtSetorAtendente.Location = new Point(287, 106);
+            txtSetorAtendente.Location = new Point(91, 64);
             txtSetorAtendente.Name = "txtSetorAtendente";
             txtSetorAtendente.Size = new Size(125, 27);
             txtSetorAtendente.TabIndex = 3;
@@ -180,7 +182,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(237, 109);
+            label4.Location = new Point(35, 71);
             label4.Name = "label4";
             label4.Size = new Size(44, 20);
             label4.TabIndex = 2;
@@ -188,7 +190,7 @@
             // 
             // txtNomeAtendente
             // 
-            txtNomeAtendente.Location = new Point(287, 53);
+            txtNomeAtendente.Location = new Point(91, 16);
             txtNomeAtendente.Name = "txtNomeAtendente";
             txtNomeAtendente.Size = new Size(125, 27);
             txtNomeAtendente.TabIndex = 1;
@@ -196,7 +198,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(231, 56);
+            label3.Location = new Point(35, 23);
             label3.Name = "label3";
             label3.Size = new Size(50, 20);
             label3.TabIndex = 0;
@@ -204,6 +206,8 @@
             // 
             // tabChamados
             // 
+            tabChamados.Controls.Add(comboBox4);
+            tabChamados.Controls.Add(label9);
             tabChamados.Controls.Add(button2);
             tabChamados.Controls.Add(comboBox3);
             tabChamados.Controls.Add(label8);
@@ -224,7 +228,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(507, 56);
+            button2.Location = new Point(141, 282);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 10;
@@ -235,15 +239,15 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(348, 57);
+            comboBox3.Location = new Point(130, 161);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
+            comboBox3.Size = new Size(129, 28);
             comboBox3.TabIndex = 9;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(246, 61);
+            label8.Location = new Point(28, 164);
             label8.Name = "label8";
             label8.Size = new Size(96, 20);
             label8.TabIndex = 8;
@@ -252,14 +256,14 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(56, 122);
+            listBox1.Location = new Point(312, 14);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(385, 244);
+            listBox1.Size = new Size(461, 384);
             listBox1.TabIndex = 7;
             // 
             // button1
             // 
-            button1.Location = new Point(507, 8);
+            button1.Location = new Point(24, 282);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 6;
@@ -269,15 +273,15 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(115, 56);
+            textBox1.Location = new Point(95, 56);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(164, 27);
             textBox1.TabIndex = 5;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(28, 59);
+            label7.Location = new Point(24, 59);
             label7.Name = "label7";
             label7.Size = new Size(74, 20);
             label7.TabIndex = 4;
@@ -286,15 +290,16 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(348, 14);
+            comboBox2.Location = new Point(108, 104);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(151, 28);
             comboBox2.TabIndex = 3;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(246, 17);
+            label6.Location = new Point(24, 112);
             label6.Name = "label6";
             label6.Size = new Size(78, 20);
             label6.TabIndex = 2;
@@ -305,7 +310,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(89, 14);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
+            comboBox1.Size = new Size(170, 28);
             comboBox1.TabIndex = 1;
             // 
             // label5
@@ -316,6 +321,23 @@
             label5.Size = new Size(55, 20);
             label5.TabIndex = 0;
             label5.Text = "Cliente";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(28, 223);
+            label9.Name = "label9";
+            label9.Size = new Size(81, 20);
+            label9.TabIndex = 11;
+            label9.Text = "Prioridade:";
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(108, 215);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(151, 28);
+            comboBox4.TabIndex = 12;
             // 
             // Form1
             // 
@@ -366,5 +388,7 @@
         private Label label6;
         private ComboBox comboBox1;
         private Label label5;
+        private ComboBox comboBox4;
+        private Label label9;
     }
 }

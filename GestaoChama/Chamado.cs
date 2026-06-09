@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace GestaoChama
 {
@@ -11,17 +12,22 @@ namespace GestaoChama
         public string Descricao { get; set; }
         public string Status { get; set; }
 
-        public Chamado(Cliente cliente, Atendente atendente, string descricao)
+        public string Prioridade { get; set; }
+
+        public Chamado(Cliente cliente, Atendente atendente, string descricao, string prioridade)
         {
             Cliente = cliente;
             Atendente = atendente;
             Descricao = descricao;
             Status = "Aberto";
+            Prioridade = prioridade;
         }
+
+
 
         public override string ToString()
         {
-            return $"[{Status}] {Cliente.Nome} → {Atendente.Nome}: {Descricao}";
+            return $"[{Status}] [({Prioridade})] {Cliente.Nome} → {Atendente.Nome}: {Descricao}";
         }
     }
 }
